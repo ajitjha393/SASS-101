@@ -48,17 +48,21 @@ body {
 	}
 }
 
-.sass-introduction {
+.sass-section {
 	border: $border-default;
 	background: lighten($color: map-get($map: $colors, $key: main), $amount: 75%);
 	padding: 2 * $size-default;
 	text-align: center;
-	box-shadow: $size-tiny $size-tiny ($size-tiny/2) #ccc;
 	width: 90%;
 	box-sizing: border-box;
 	@media (min-width: 40rem) {
 		width: ($size-default * 30);
 	}
+}
+
+.sass-introduction {
+	@extend .sass-section;
+	box-shadow: $size-tiny $size-tiny ($size-tiny/2) #ccc;
 }
 
 .sass-introduction p {
@@ -66,16 +70,8 @@ body {
 }
 
 .sass-details {
-	border: $border-default;
-	background: #fae5ff;
-	padding: $size-default;
-	text-align: center;
+	@extend .sass-section;
 	margin: ($size-default * 2) 0;
-	width: 90%;
-	box-sizing: border-box;
-	@media (min-width: 40rem) {
-		width: ($size-default * 30);
-	}
 }
 
 .section-header {
