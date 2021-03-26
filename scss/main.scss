@@ -36,16 +36,16 @@ body {
 	}
 
 	align-items: center;
-	padding: 3rem 0;
+	padding: (3 * $size-default) 0;
 	box-sizing: border-box;
 }
 
 .sass-introduction {
 	border: $border-default;
 	background: lighten($color: map-get($map: $colors, $key: main), $amount: 75%);
-	padding: 2rem;
+	padding: 2 * $size-default;
 	text-align: center;
-	box-shadow: $size-tiny $size-tiny 0.1rem #ccc;
+	box-shadow: $size-tiny $size-tiny ($size-tiny/2) #ccc;
 	width: 90%;
 	box-sizing: border-box;
 }
@@ -59,7 +59,7 @@ body {
 	background: #fae5ff;
 	padding: $size-default;
 	text-align: center;
-	margin: 2rem 0;
+	margin: ($size-default * 2) 0;
 	width: 90%;
 	box-sizing: border-box;
 }
@@ -109,11 +109,11 @@ body {
 	}
 
 	.container {
-		padding: 3rem 0;
+		padding: ($size-default * 3) 0;
 	}
 
 	.sass-introduction,
 	.sass-details {
-		width: 30rem;
+		width: ($size-default * 30);
 	}
 }
