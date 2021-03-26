@@ -44,14 +44,14 @@ body {
   width: 90%;
   box-sizing: border-box;
 }
+@media (min-width: 40rem) {
+  .sass-introduction {
+    width: 30rem;
+  }
+}
 
 .sass-introduction p {
   margin: 0;
-}
-@media (min-width: 40rem) {
-  .sass-introduction p {
-    width: 30rem;
-  }
 }
 
 .sass-details {
