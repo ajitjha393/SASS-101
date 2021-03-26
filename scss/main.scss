@@ -1,5 +1,16 @@
 $main-color: #521751;
-$border-default: 0.05rem solid $main-color;
+
+$colors: (
+	main: #521751,
+	secondary: #fa923f,
+);
+
+$border-default: 0.05rem solid
+	map-get(
+		$map: $colors,
+		$key: main,
+	);
+
 @import 'typography.css';
 
 html {
@@ -75,7 +86,7 @@ body {
 
 	.documentation-link {
 		text-decoration: none;
-		color: $main-color;
+		color: map-get($map: $colors, $key: main);
 		display: block;
 		padding: 0.2rem;
 		border: $border-default;
@@ -84,8 +95,8 @@ body {
 	.documentation-link:hover,
 	.documentation-link:active {
 		color: white;
-		background: #fa923f;
-		border-color: #fa923f;
+		background: map-get($map: $colors, $key: secondary);
+		border-color: map-get($map: $colors, $key: secondary);
 	}
 }
 
